@@ -1,4 +1,7 @@
 // 2단
+
+import 'dart:math';
+
 void print2dan() {
   print("2 x 1 = ${2 * 1}");
   print("2 x 2 = ${2 * 2}");
@@ -95,6 +98,18 @@ void print9dan() {
   print("9 x 9 = ${9 * 9}");
 }
 
+/**
+ * (-b±√(b²-4ac))/(2a)
+ */
+Map quadraticFomula(double a, double b, double c) {
+  double discriminant = b * b - 4 * a * c;
+  if (discriminant <= 0) return {'result': false};
+  double root1 = (-b + sqrt(discriminant)) / 2 * a;
+  double root2 = (-b - sqrt(discriminant)) / 2 * a;
+
+  return {'root1': root1, 'root2': root2};
+}
+
 void main() {
   print2dan();
   print('--------------');
@@ -112,4 +127,6 @@ void main() {
   print('--------------');
   print9dan();
   print('--------------');
+
+  print(quadraticFomula(2, 10, 4));
 }
