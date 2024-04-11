@@ -20,4 +20,31 @@ void main() {
   print("[13] ($num1 == $num2) OR ($num1 == $num3) : $flag1");
   print("[14] ($num1 == $num2) AND ($num1 == $num3) : $flag2");
   print("[16] NOT ($num1 == $num2) : ${!(num1 == num2)}");
+
+  if (num1 == num2) {
+    print("[16] (a) num1[$num1] = num2[$num2]");
+  } else if (num1 == num3) {
+    print("[16] (b) num1[$num1] = num3[$num3]");
+  } else {
+    print("[16] (c) num1[$num1] != num2[$num2] != num3[$num3]");
+  }
+
+  var switchStatus = "OFF";
+  switch (switchStatus) {
+    case "off":
+    case "OFF":
+      print("[17] (a) switch is OFF");
+      break;
+    case "on":
+    case "ON":
+      print("[17] (a) switch is ON");
+      break;
+    default:
+      print("[17] (c) switch status is not correct");
+      break;
+  }
+
+  var programTermination = "ERROR";
+  assert(programTermination == "NORMAL");
+  print("[19] program terminated in normal");
 }
