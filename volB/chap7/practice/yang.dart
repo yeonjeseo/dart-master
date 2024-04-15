@@ -1,14 +1,15 @@
 void main() {
   var result = "";
+  var size = 5;
   var col = 1;
   var row = 1;
 
-  for (col = row = 1; col <= 5; col++) {
-    while (row <= 5) {
-      if (row.isOdd) {
-        result += col.isOdd ? "X" : "O";
+  for (col; col <= size; col++) {
+    while (row <= size) {
+      if (row == col || row == size + 1) {
+        result += "X";
       } else {
-        result += col.isOdd ? "O" : "X";
+        result += "O";
       }
       row++;
     }
