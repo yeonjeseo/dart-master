@@ -6,7 +6,7 @@ void main() {
 
   for (col; col <= size; col++) {
     while (row <= size) {
-      if (row == col || row == size + 1) {
+      if (row == col || row + col == size + 1) {
         result += "X";
       } else {
         result += "O";
